@@ -53,7 +53,12 @@ def load_system_prompt():
 api_key = os.getenv("GOOGLE_API_KEY")
 if api_key:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    
+    # This line creates the search tool
+    tools = "google_search_retrieval" 
+    
+    # This line tells the model to use that tool
+    model = genai.GenerativeModel('gemini-1.5-flash', tools=tools)
 else:
     model = None
 
