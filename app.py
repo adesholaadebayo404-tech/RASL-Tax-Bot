@@ -54,18 +54,16 @@ api_key = os.getenv("GOOGLE_API_KEY")
 if api_key:
     genai.configure(api_key=api_key)
     
- # This line creates the search tool
-    # The 2026 "Dynamic" Search setup
-        tools = [{
-            "google_search_retrieval": {
-                "dynamic_retrieval_config": {
-                    "mode": "unspecified",
-                    "dynamic_threshold": 0.3
-                }
+    # Professional 2026 Search Configuration
+    tools = [{
+        "google_search_retrieval": {
+            "dynamic_retrieval_config": {
+                "mode": "unspecified",
+                "dynamic_threshold": 0.3
             }
-        }]
-        
-        model = genai.GenerativeModel('gemini-1.5-flash', tools=tools)     
+        }
+    }]
+    model = genai.GenerativeModel('gemini-1.5-flash', tools=tools)
 else:
     model = None
 
