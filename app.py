@@ -9,7 +9,7 @@ load_dotenv()
 # Configure Streamlit page
 st.set_page_config(
     page_title="Resilience - RASL AI Assistant",
-    page_icon="🛡️",
+    page_icon="https://img1.wsimg.com/isteam/ip/132a448b-d29c-444c-9e47-ce47021f0d8d/RAS%20Logo.png",
     layout="centered"
 )
 
@@ -58,12 +58,13 @@ else:
     model = None
 
 # App Title and Header
-st.title("🛡️ Resilience")
+st.image("https://img1.wsimg.com/isteam/ip/132a448b-d29c-444c-9e47-ce47021f0d8d/RAS%20Logo.png", width=100)
+st.title("Resilience")
 st.subheader("Your RASL AI Accounting Assistant")
 
 # Sidebar
 with st.sidebar:
-    st.image("https://img.icons8.com/ios-filled/100/1a365d/shield.png", width=100)
+    st.image("https://img1.wsimg.com/isteam/ip/132a448b-d29c-444c-9e47-ce47021f0d8d/RAS%20Logo.png")
     st.title("RASL")
     st.markdown("""
     **Resilience Accounting Service Limited**
