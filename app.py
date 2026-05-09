@@ -55,7 +55,7 @@ if api_key:
     genai.configure(api_key=api_key)
     
     # This line creates the search tool
-    tools = "google_search_retrieval" 
+    tools = [{"google_search": {}}]
     
     # This line tells the model to use that tool
     model = genai.GenerativeModel('gemini-1.5-flash', tools=tools)
