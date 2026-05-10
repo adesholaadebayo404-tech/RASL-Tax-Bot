@@ -31,7 +31,7 @@ except FileNotFoundError:
 
 # 3. Model Initialization: Using Gemini 1.5 Flash with the Search tool
 model = genai.GenerativeModel(
-    model_name='models/gemini-1.5-flash',
+    model_name='gemini-1.5-flash',
     tools=tools,
     system_instruction=system_instruction
 )
